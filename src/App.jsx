@@ -1,36 +1,30 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import getCocktails from './services/getCocktails'
-import Cocktail from './components/Cocktail'
+import { Link, Route } from 'wouter'
 import './App.css'
-import CocktailCard from './components/Cocktail'
+import ListOfCocktails from './components/ListOfCocktails/ListOfCocktails'
+import Home from './pages/Home/home'
+import SearchResultsByBrowser from './pages/SearchResults/searchResultsByBrowser'
+import SearchResultsByLetter from './pages/SearchResults/searchResultsByLetter'
 
 function App() {
-  const [cocktails, setCocktails] = useState([])
 
-  useEffect(function (){
-    getCocktails({ keyword : 'bramble'}).then(cocktails => setCocktails(cocktails))
-  },[])
-
-  return (
+ return (
     <div className="App">
-        LOS COCTELES
-        <section>
-          {
-            cocktails.map(singleCocktail => 
-              <CocktailCard
-               title={singleCocktail.strDrink}
-               id={singleCocktail.idDrink}
-               url={singleCocktail.strDrinkThumb}
-               ing1={singleCocktail.strIngredient1}
-               ing2={singleCocktail.strIngredient2} 
-               ing3={singleCocktail.strIngredient3} 
-               ing4={singleCocktail.strIngredient4} 
-               ing5={singleCocktail.strIngredient5} />
-              )
-          }
-        </section>
+      <Link to='/'>
+        <h1 className='title'>LOS CÓCTELE</h1>
+
+      </Link>
+      <section>
+        <Route path='/' component={Home}/>
+      </section>
+
+      <section>
+        <Route path='/search/:keyword' component={SearchResultsByBrowser}/>
+      </section>
+
+      <section>
+        <Route path='/letter/:letter' component={SearchResultsByLetter}/>
+      </section>
     </div>
   )
 }
@@ -38,3 +32,22 @@ function App() {
 export default App
 
 
+
+
+
+
+/*           {
+            cocktails.map(singleCocktail => 
+              <CocktailCard
+              key={singleCocktail.idDrink}
+              title={singleCocktail.strDrink}
+              id={singleCocktail.idDrink}
+              url={singleCocktail.strDrinkThumb}
+              ing1={singleCocktail.strIngredient1}
+              ing2={singleCocktail.strIngredient2} 
+              ing3={singleCocktail.strIngredient3} 
+              ing4={singleCocktail.strIngredient4} 
+              ing5={singleCocktail.strIngredient5} 
+              />
+              )
+          } */
