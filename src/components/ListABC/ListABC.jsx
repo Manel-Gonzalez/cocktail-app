@@ -1,59 +1,55 @@
 import { Link } from 'wouter'
 import './listABC.css'
-export default function ListABC(){
+export default function ListABC() {
     return <>
         <ul className="alphabet">
-            <li><Link to='' />A</li>
+            <Link to='/letter/A'>A</Link>
             /
-            <li>B</li>
+            <Link to='/letter/B'>B</Link>
             /
-            <li>C</li>
+            <Link to='/letter/C'>C</Link>
             /
-            <li>D</li>
+            <Link to='/letter/D'>D</Link>
             /
-            <li>E</li>
+            <Link to='/letter/E'>E</Link>
             /
-            <li>F</li>
+            <Link to='/letter/F'>F</Link>
             /
-            <li>G</li>
+            <Link to='/letter/G'>G</Link>
             /
-            <li>H</li>
+            <Link to='/letter/H'>H</Link>
             /
-            <li>I</li>
+            <Link to='/letter/I'>I</Link>
             /
-            <li>J</li>
+            <Link to='/letter/J'>J</Link>
             /
-            <li>K</li>
+            <Link to='/letter/K'>K</Link>
             /
-            <li>L</li>
+            <Link to='/letter/L'>L</Link>
             /
-            <li>M</li>
+            <Link to='/letter/M'>M</Link>
             /
-            <li>N</li>
+            <Link to='/letter/N'>N</Link>
             /
-            <li>O</li>
+            <Link to='/letter/O'>O</Link>
             /
-            <li>P</li>
+            <Link to='/letter/P'>P</Link>
             /
-            <li>Q</li>
+            <Link to='/letter/Q'>Q</Link>
             /
-            <li>R</li>
+            <Link to='/letter/R'>R</Link>
             /
-            <li>S</li>
+            <Link to='/letter/S'>S</Link>
             /
-            <li>T</li>
+            <Link to='/letter/T'>T</Link>
             /
-            <li>U</li>
+            <Link to='/letter/V'>V</Link>
             /
-            <li>V</li>
+            <Link to='/letter/W'>W</Link>
             /
-            <li>W</li>
+            <Link to='/letter/Y'>Y</Link>
             /
-            <li>X</li>
-            /
-            <li>Y</li>
-            /
-            <li>Z</li>
+            <Link to='/letter/Z'>Z</Link>
         </ul>
     </>
 }

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import ListOfCocktails from "../../components/ListOfCocktails/ListOfCocktails";
-import getCocktailsByBrowser from "../../services/searchByBrowser"
+import searchRandom from "../../services/searchRandom";
 
-export default function SearchResults({ params }) {
-    const { keyword } = params
+export default function SearchRandom() {
     const [cocktails, setCocktails] = useState([])
 
     useEffect(function () {
-        getCocktailsByBrowser({ keyword })
+        searchRandom()
             .then(cocktails => {
                 setCocktails(cocktails)
-            }, [keyword])
+            }, searchRandom())
 
     })
 

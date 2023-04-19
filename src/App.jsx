@@ -5,25 +5,30 @@ import ListOfCocktails from './components/ListOfCocktails/ListOfCocktails'
 import Home from './pages/Home/home'
 import SearchResultsByBrowser from './pages/SearchResults/searchResultsByBrowser'
 import SearchResultsByLetter from './pages/SearchResults/searchResultsByLetter'
+import SearchRandom from './pages/SearchResults/searchRandom'
 
 function App() {
 
- return (
+  return (
     <div className="App">
       <Link to='/'>
         <h1 className='title'>LOS CÓCTELE</h1>
 
       </Link>
       <section>
-        <Route path='/' component={Home}/>
+        <Route path='/' component={Home} />
       </section>
 
       <section>
-        <Route path='/search/:keyword' component={SearchResultsByBrowser}/>
+        <Route path='/search/:keyword' component={SearchResultsByBrowser} />
       </section>
 
       <section>
-        <Route path='/letter/:letter' component={SearchResultsByLetter}/>
+        <Route path='/letter/:letter' component={SearchResultsByLetter} />
+      </section>
+
+      <section>
+        <Route path='/random' component={SearchRandom} />
       </section>
     </div>
   )
