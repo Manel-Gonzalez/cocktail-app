@@ -1,0 +1,24 @@
+:root {
+    --results-columns: 2;
+}
+
+.ListOfCocktails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0px 16px;
+    min-height: 100vh;
+}
+
+
+
+@media (min-width: 600px) {
+    :root {
+        --results-columns: 3;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        --results-columns: 4;
+    }
+}

@@ -11,7 +11,7 @@ export default function SearchRandom() {
                 setCocktails(cocktails)
             }, searchRandom())
 
-    })
+    }, [])
 
     return <>
         <ListOfCocktails cocktails={cocktails} />
