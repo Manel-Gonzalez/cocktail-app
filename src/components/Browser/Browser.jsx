@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "wouter"
+import './browser.css'
 
 export default function Browser() {
     const [keyword, setKeyword] = useState('')

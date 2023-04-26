@@ -1,21 +1,46 @@
 .Cocktail {
-    margin-bottom: .5em;
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.671);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.185);
+
 }
 
 .Cocktail h4 {
-    background: rgba(0, 0, 0, .3);
-    bottom: 0;
-    font-size: 12px;
+    background: rgba(70, 66, 66, 0.75);
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     color: #fff;
     margin: 0;
+    border-radius: 5px 5px 0px 0px;
+
+
 }
 
 .Cocktail img {
     width: 100%;
     object-fit: contain;
     vertical-align: top;
+    border-radius: 0px 0px 2px 2px;
 }
 
 i {
     font-size: 80px;
+}
+
+@media (min-width:600px) {
+    .Cocktail {
+        width: 16em;
+    }
+
+    .Cocktail img {
+        max-height: 20em;
+        max-width: 20em;
+
+
+    }
 }

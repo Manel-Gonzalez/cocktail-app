@@ -1,0 +1,17 @@
+input {
+    height: 3em;
+    width: 24em;
+    border-radius: 10px;
+    color: #221e1e;
+    padding-left: 12px;
+    background-color: whitesmoke;
+    font-size: 16px;
+    box-shadow: 2px 2px 10px 3px rgba(97, 94, 94, 0.301);
+    border: 2px solid rgba(70, 66, 66, 0.75);
+
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid tomato;
+}

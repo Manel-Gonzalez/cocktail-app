@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import ListOfCocktails from "../../components/ListOfCocktails/ListOfCocktails";
-import getCocktailsByLetter from "../../services/searchByLetter"
+import searchCommonBevarages from "../../services/searchCommonBevarages";
 
-export default function SearchResultsByLetter({ params }) {
-    const { letter } = params
+export default function SearchCommonResults({ params }) {
+    const { bevarages } = params
     const [cocktails, setCocktails] = useState([])
 
 
     useEffect(function () {
-        getCocktailsByLetter({ letter })
+        searchCommonBevarages({ bevarages })
             .then(cocktails => {
                 setCocktails(cocktails)
-            }, [letter])
+            }, [bevarages])
     })
 
     return <>

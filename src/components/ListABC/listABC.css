@@ -1,7 +1,9 @@
-ul{
+.alphabet {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 4px;
-    font-size: 24px;
+    font-size: 28px;
 }

@@ -1,0 +1,10 @@
+.commonBevarages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    gap: 12px;
+    font-size: 28px;
+
+}

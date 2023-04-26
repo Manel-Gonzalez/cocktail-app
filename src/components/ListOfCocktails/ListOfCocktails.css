@@ -3,10 +3,12 @@
 }
 
 .ListOfCocktails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0px 16px;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: row wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px 16px;
+    min-height: 65vh;
 }
 
 
