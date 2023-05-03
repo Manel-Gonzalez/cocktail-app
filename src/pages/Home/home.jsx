@@ -10,9 +10,7 @@ export default function Home() {
 
     return (
         <>
-            <Browser></Browser>
-            <ListABC></ListABC>
-            <CommonBevarages></CommonBevarages>
+            aaaaaaaa
         </>
     )
 }

@@ -4,6 +4,7 @@ export const API_SEARCH = "/search.php?s="
 export const API_FIRST_LETTER = "/search.php?f="
 export const API_RANDOM = "/random.php"
 export const API_BEVARAGE = "/filter.php?i="
+export const API_ID = "/lookup.php?i="
 
 
 

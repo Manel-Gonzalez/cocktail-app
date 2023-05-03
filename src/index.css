@@ -4,20 +4,20 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #d49e8d;
+  background-color: #ded1bd;
 
 
 }
 
 a {
   font-weight: 500;
-  color: rgb(255, 99, 71);
+  color: #dd9b87;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: rgb(209, 54, 26);
+  color: #cf856e;
 }
 
 body {

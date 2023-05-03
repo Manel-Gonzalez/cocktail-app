@@ -1,27 +1,47 @@
-.Cocktail {
+.CocktailCard {
     height: 100%;
     width: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.671);
-    border-radius: 5px;
+    border: 3px solid #b09401;
+    border-radius: 10px;
     box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.185);
 
 }
 
-.Cocktail h4 {
-    background: rgba(70, 66, 66, 0.75);
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: #fff;
-    margin: 0;
-    border-radius: 5px 5px 0px 0px;
+.CocktailCard div {
+    padding: 10px 10px;
+    background: #faf6f2;
+    border-radius: 0 0 8px 8px;
+
 
 
 }
 
-.Cocktail img {
+.CocktailCard:hover {
+    box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.404);
+
+    transform: scale(1.2);
+
+
+}
+
+
+.CocktailCard h4 {
+    background: rgb(212, 158, 141);
+    font-family: 'Dancing Script', cursive;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    margin: 0;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid #b09401;
+
+
+}
+
+.CocktailCard img {
     width: 100%;
     object-fit: contain;
     vertical-align: top;
@@ -33,11 +53,11 @@ i {
 }
 
 @media (min-width:600px) {
-    .Cocktail {
+    .CocktailCard {
         width: 16em;
     }
 
-    .Cocktail img {
+    .CocktailCard img {
         max-height: 20em;
         max-width: 20em;
 

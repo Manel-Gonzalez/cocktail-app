@@ -1,13 +1,14 @@
-import getCocktails from '../../services/searchByBrowser'
-import { useState, useEffect } from 'react'
 import "./cocktail.css"
+import { Link } from 'wouter'
 
-export default function CocktailCard({ title, id, url, ing1, ing2, ing3, ing4, ing5 }) {
-
+export default function CocktailCard({ strDrink, idDrink, strDrinkThumb, strIngredient1 }) {
     return (
-        <div className='Cocktail'>
-            <h4>{title}</h4>
-            <img alt={id} src={url} />
+        <div className='CocktailCard'>
+            <Link to={`/cocktail/${idDrink}`} className='cocktail-link'>
+                <h4>{strDrink}</h4>
+                <img alt={idDrink} src={strDrinkThumb} />
+                <div>{strIngredient1} </div>
+            </Link>
 
         </div>
     )

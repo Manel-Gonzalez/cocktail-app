@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Cocktail from "../Cocktail/Cocktail"
-import getCocktails from '../../services/searchByBrowser'
+import SingleCocktail from '../SingleCocktail/SingleCocktail'
+import getCocktails from '../../services/getByBrowser'
 import ListABC from '../ListABC/ListABC'
 import Browser from '../Browser/Browser'
 import "./ListOfCocktails.css"
@@ -9,22 +10,17 @@ import CommonBevarages from '../CommonBevarages/Common'
 
 
 export default function ListOfCocktails({ cocktails }) {
-
-
+   const drinks = cocktails
    return <>
-      <Browser></Browser>
-      <ListABC></ListABC>
-      <CommonBevarages></CommonBevarages>
-
       <div className='ListOfCocktails'>
          {
-            cocktails.map(({ idDrink, strDrink, strDrinkThumb, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5 }) =>
+            cocktails?.drinks?.map(({ idDrink, strDrink, strDrinkThumb, strIngredient1 } = drinks) =>
                <Cocktail
                   key={idDrink}
-                  title={strDrink}
-                  id={idDrink}
-                  url={strDrinkThumb}
-
+                  strDrink={strDrink}
+                  idDrink={idDrink}
+                  strDrinkThumb={strDrinkThumb}
+                  strIngredient1={strIngredient1}
                />
             )
          }
