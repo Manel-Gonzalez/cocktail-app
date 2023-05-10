@@ -13,7 +13,7 @@ import ListABC from "./components/ListABC/ListABC"
 import Browser from "./components/Browser/Browser"
 import CommonBevarages from "./components/CommonBevarages/Common"
 import { supabase } from './supabaseClient'
-import Authentication from './pages/Login/Auth'
+import Authentication from './pages/Login/auth'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
