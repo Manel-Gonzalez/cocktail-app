@@ -1,0 +1,58 @@
+.singleCard {
+    width: 100%;
+    border: 3px solid #b09401;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.185);
+    margin: auto;
+
+}
+
+.singleCard img {
+    width: 100%;
+    object-fit: contain;
+    vertical-align: top;
+    border-radius: 0px 0px 2px 2px;
+}
+
+.singleCard h4 {
+    background: rgb(212, 158, 141);
+    font-family: 'Dancing Script', cursive;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    margin: 0;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid #b09401;
+}
+
+.ingredientContainer {
+    padding: 10px 10px;
+    background: #faf6f2;
+    border-radius: 0 0 8px 8px;
+}
+
+.imgContainer {
+    background-color: #faf6f28e;
+}
+
+.ingredients {
+    color: #bb6d56;
+    margin: 10px 0px;
+}
+
+.instTitle {
+    color: #bb6d56;
+    margin: 15px 15px;
+}
+
+
+@media (min-width:604px) {
+
+    .singleCard {
+        width: 60%;
+    }
+
+}

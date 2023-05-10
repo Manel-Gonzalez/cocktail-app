@@ -1,6 +1,6 @@
 input {
     height: 3em;
-    width: 24em;
+    width: 18em;
     border-radius: 10px;
     color: #221e1e;
     padding-left: 12px;
@@ -14,4 +14,10 @@ input {
 input:focus {
     outline: none !important;
     border: 2px solid #cf856e;
+}
+
+@media (min-width:604px) {
+    input {
+        width: 24em;
+    }
 }

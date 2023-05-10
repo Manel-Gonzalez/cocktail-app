@@ -17,9 +17,12 @@ export default function Browser() {
 
 
     return <>
-        <form onSubmit={handleSubmit}>
-            <input placeholder="Busca tus cóctele" type="text" onChange={handleChange} value={keyword} />
-        </form>
+        <span>
+            <form onSubmit={handleSubmit}>
+                <input placeholder="Busca tus cóctele" type="text" onChange={handleChange} value={keyword} />
+            </form>
+        </span>
+
 
     </>
 }

@@ -11,9 +11,6 @@
     padding: 10px 10px;
     background: #faf6f2;
     border-radius: 0 0 8px 8px;
-
-
-
 }
 
 .CocktailCard:hover {
@@ -27,6 +24,7 @@
 
 .CocktailCard h4 {
     background: rgb(212, 158, 141);
+    padding: 0px 7px 0px 7px;
     font-family: 'Dancing Script', cursive;
     height: 2em;
     display: flex;
@@ -52,7 +50,7 @@ i {
     font-size: 80px;
 }
 
-@media (min-width:600px) {
+@media (min-width:604px) {
     .CocktailCard {
         width: 16em;
     }
@@ -60,7 +58,10 @@ i {
     .CocktailCard img {
         max-height: 20em;
         max-width: 20em;
+    }
 
-
+    .CocktailCard h4 {
+        height: 3em;
+        font-size: 1.8em;
     }
 }

@@ -9,8 +9,10 @@ import CommonBevarages from '../CommonBevarages/Common'
 
 
 
-export default function ListOfCocktails({ cocktails }) {
+export default function ListOfCocktails({ cocktails, bevarages }) {
    const drinks = cocktails
+   const test = bevarages
+
    return <>
       <div className='ListOfCocktails'>
          {
@@ -21,6 +23,7 @@ export default function ListOfCocktails({ cocktails }) {
                   idDrink={idDrink}
                   strDrinkThumb={strDrinkThumb}
                   strIngredient1={strIngredient1}
+                  test={test}
                />
             )
          }

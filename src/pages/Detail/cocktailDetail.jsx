@@ -1,10 +1,6 @@
-import { useContext, useState } from "react"
-import StaticContext from "../../context/StaticContext"
-import CocktailContext from "../../context/CocktailContext"
-import SingleCocktail from "../../components/SingleCocktail/SingleCocktail"
-import Cocktail from "../../components/Cocktail/Cocktail"
+import { useState } from "react"
 import useCocktails from "../../hooks/useCocktailById"
-
+import './cocktailDetail.css'
 
 export default function CocktailDetail({ params }) {
     const [data, setData] = useState([])
@@ -20,29 +16,34 @@ export default function CocktailDetail({ params }) {
 
         {
             data.drinks === undefined ? <h1>LOADING</h1> :
-                <div>
+                <div className="singleCard">
                     <h4>{data?.drinks[0]?.strDrink}</h4>
-                    <img alt={data?.drinks[0]?.idDrink} src={data?.drinks[0]?.strDrinkThumb} />
+                    <div className="imgContainer">
+                        <img alt={data?.drinks[0]?.idDrink}
+                            src={data?.drinks[0]?.strDrinkThumb}
+                            className="cardImage" />
+                    </div>
+                    <div className="ingredientContainer">
+                        <h3 className="ingredients">Ingredients</h3>
+                        {data?.drinks[0]?.strIngredient1 === null ? <></> : <div>{data?.drinks[0]?.strIngredient1} -  <span>{data?.drinks[0]?.strMeasure1}</span></div>}
+                        {data?.drinks[0]?.strIngredient2 === null ? <></> : <div>{data?.drinks[0]?.strIngredient2} -  <span>{data?.drinks[0]?.strMeasure2}</span></div>}
+                        {data?.drinks[0]?.strIngredient3 === null ? <></> : <div>{data?.drinks[0]?.strIngredient3} -  <span>{data?.drinks[0]?.strMeasure3}</span></div>}
+                        {data?.drinks[0]?.strIngredient4 === null ? <></> : <div>{data?.drinks[0]?.strIngredient4} -  <span>{data?.drinks[0]?.strMeasure4}</span></div>}
+                        {data?.drinks[0]?.strIngredient5 === null ? <></> : <div>{data?.drinks[0]?.strIngredient5} -  <span>{data?.drinks[0]?.strMeasure5}</span></div>}
+                        {data?.drinks[0]?.strIngredient6 === null ? <></> : <div>{data?.drinks[0]?.strIngredient6} -  <span>{data?.drinks[0]?.strMeasure6}</span></div>}
+                        {data?.drinks[0]?.strIngredient7 === null ? <></> : <div>{data?.drinks[0]?.strIngredient7} -  <span>{data?.drinks[0]?.strMeasure7}</span></div>}
+                        {data?.drinks[0]?.strIngredient8 === null ? <></> : <div>{data?.drinks[0]?.strIngredient8} -  <span>{data?.drinks[0]?.strMeasure8}</span></div>}
+                        {data?.drinks[0]?.strIngredient9 === null ? <></> : <div>{data?.drinks[0]?.strIngredient9} -  <span>{data?.drinks[0]?.strMeasure9}</span></div>}
+                        {data?.drinks[0]?.strIngredient10 === null ? <></> : <div>{data?.drinks[0]?.strIngredient10} -  <span>{data?.drinks[0]?.strMeasure10}</span></div>}
+                        {data?.drinks[0]?.strIngredient11 === null ? <></> : <div>{data?.drinks[0]?.strIngredient11} -  <span>{data?.drinks[0]?.strMeasure11}</span></div>}
+                        {data?.drinks[0]?.strIngredient12 === null ? <></> : <div>{data?.drinks[0]?.strIngredient12} -  <span>{data?.drinks[0]?.strMeasure12}</span></div>}
+                        {data?.drinks[0]?.strIngredient13 === null ? <></> : <div>{data?.drinks[0]?.strIngredient13} -  <span>{data?.drinks[0]?.strMeasure13}</span></div>}
+                        {data?.drinks[0]?.strIngredient14 === null ? <></> : <div>{data?.drinks[0]?.strIngredient14} -  <span>{data?.drinks[0]?.strMeasure14}</span></div>}
+                        {data?.drinks[0]?.strIngredient15 === null ? <></> : <div>{data?.drinks[0]?.strIngredient15} -  <span>{data?.drinks[0]?.strMeasure15}</span></div>}
+                        <h3 className="instTitle">Instructions</h3>
+                        <span className="instText">{data?.drinks[0].strInstructions}</span>
 
-
-                    {data?.drinks[0]?.strIngredient1 === null ? <></> : <div>{data?.drinks[0]?.strIngredient1}   <span>{data?.drinks[0]?.strMeasure1}</span></div>}
-                    {data?.drinks[0]?.strIngredient2 === null ? <></> : <div>{data?.drinks[0]?.strIngredient2}   <span>{data?.drinks[0]?.strMeasure2}</span></div>}
-                    {data?.drinks[0]?.strIngredient3 === null ? <></> : <div>{data?.drinks[0]?.strIngredient3}   <span>{data?.drinks[0]?.strMeasure3}</span></div>}
-                    {data?.drinks[0]?.strIngredient4 === null ? <></> : <div>{data?.drinks[0]?.strIngredient4}   <span>{data?.drinks[0]?.strMeasure4}</span></div>}
-                    {data?.drinks[0]?.strIngredient5 === null ? <></> : <div>{data?.drinks[0]?.strIngredient5}   <span>{data?.drinks[0]?.strMeasure5}</span></div>}
-                    {data?.drinks[0]?.strIngredient6 === null ? <></> : <div>{data?.drinks[0]?.strIngredient6}   <span>{data?.drinks[0]?.strMeasure6}</span></div>}
-                    {data?.drinks[0]?.strIngredient7 === null ? <></> : <div>{data?.drinks[0]?.strIngredient7}   <span>{data?.drinks[0]?.strMeasure7}</span></div>}
-                    {data?.drinks[0]?.strIngredient8 === null ? <></> : <div>{data?.drinks[0]?.strIngredient8}   <span>{data?.drinks[0]?.strMeasure8}</span></div>}
-                    {data?.drinks[0]?.strIngredient9 === null ? <></> : <div>{data?.drinks[0]?.strIngredient9}   <span>{data?.drinks[0]?.strMeasure9}</span></div>}
-                    {data?.drinks[0]?.strIngredient10 === null ? <></> : <div>{data?.drinks[0]?.strIngredient10}   <span>{data?.drinks[0]?.strMeasure10}</span></div>}
-                    {data?.drinks[0]?.strIngredient11 === null ? <></> : <div>{data?.drinks[0]?.strIngredient11}   <span>{data?.drinks[0]?.strMeasure11}</span></div>}
-                    {data?.drinks[0]?.strIngredient12 === null ? <></> : <div>{data?.drinks[0]?.strIngredient12}   <span>{data?.drinks[0]?.strMeasure12}</span></div>}
-                    {data?.drinks[0]?.strIngredient13 === null ? <></> : <div>{data?.drinks[0]?.strIngredient13}   <span>{data?.drinks[0]?.strMeasure13}</span></div>}
-                    {data?.drinks[0]?.strIngredient14 === null ? <></> : <div>{data?.drinks[0]?.strIngredient14}   <span>{data?.drinks[0]?.strMeasure14}</span></div>}
-                    {data?.drinks[0]?.strIngredient15 === null ? <></> : <div>{data?.drinks[0]?.strIngredient15}   <span>{data?.drinks[0]?.strMeasure15}</span></div>}
-                    <br />
-                    <br />
-                    <span>{data?.drinks[0].strInstructions}</span>
+                    </div>
                 </div>
 
 

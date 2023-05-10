@@ -18,6 +18,6 @@ export default function SearchCommonResults({ params }) {
     }, [bevarages, setCocktails])
 
     return <>
-        <ListOfCocktails cocktails={cocktails} />
+        <ListOfCocktails cocktails={cocktails} bevarages={bevarages} />
     </>
 }
