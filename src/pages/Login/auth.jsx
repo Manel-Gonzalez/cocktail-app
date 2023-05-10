@@ -6,19 +6,6 @@ import { Link, Route } from 'wouter'
 
 
 export default function Authentication() {
-    /*     const [email, setEmail] = useState('')
-    
-        const handleLogin = async (event) => {
-            event.preventDefault()
-    
-            const { error } = await supabase.auth.signInWithOAuth({ email })
-    
-            if (error) {
-                alert(error.error_description || error.message)
-            } else {
-                alert('Check your email for the login link!')
-            }
-        } */
 
     return (
         <div >

@@ -13,7 +13,7 @@ import ListABC from "./components/ListABC/ListABC"
 import Browser from "./components/Browser/Browser"
 import CommonBevarages from "./components/CommonBevarages/Common"
 import { supabase } from './supabaseClient'
-import Auth from './pages/Login/Auth'
+import Authentication from './pages/Login/Auth'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
   console.log(session?.user, '123')
   return (
     <div className="app">
-      {!session ? <Auth /> : <div >
+      {!session ? <Authentication /> : <div >
         <Context.Provider value={{ session }} key={session.user.id} session={session} >
           <Navbar />
           <div className="app-container">
