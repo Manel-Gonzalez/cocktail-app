@@ -42,9 +42,7 @@ function App() {
             <CocktailContextProvider>
               <Route path='/' />
 
-              <Route path='/account' component={Account} >
-                {session => <Account session={session.user} />}
-              </Route>
+              <Route path='/account' component={Account} session={session} />
 
               <Route path='/search/:keyword' component={SearchResultsByBrowser} />
 

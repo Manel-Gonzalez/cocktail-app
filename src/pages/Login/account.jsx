@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { supabase } from "../../supabaseClient";
 
-export default function Account({ session }) {
+export default function Account() {
     const [loading, setLoading] = useState(true)
     const [username, setUsername] = useState(null)
     const [website, setWebsite] = useState(null)
     const [avatar_url, setAvatarUrl] = useState(null)
-    console.log(session, 'mimadre')
+    const session = JSON.parse(localStorage.getItem('sb-duikvocbgzzeryjwusap-auth-token'))
     useEffect(() => {
         async function getProfile() {
             setLoading(true)
@@ -29,7 +29,7 @@ export default function Account({ session }) {
         }
 
         getProfile()
-    }, [session])
+    }, [])
 
     async function updateProfile(event) {
         event.preventDefault()
@@ -53,7 +53,6 @@ export default function Account({ session }) {
         setLoading(false)
     }
 
-    console.log(session, 'aaaa')
     return (
         <form onSubmit={updateProfile} className="form-widget">
             <div>
