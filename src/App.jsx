@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, Route } from 'wouter'
+import { Link, Route, useLocation } from 'wouter'
 import './App.css'
 import SearchResultsByBrowser from './pages/SearchResults/searchResultsByBrowser'
 import SearchResultsByLetter from './pages/SearchResults/searchResultsByLetter'
@@ -18,6 +18,8 @@ import Navbar from './components/Navbar/Navbar'
 
 function App() {
   const [session, setSession] = useState(null)
+  const [path] = useLocation()
+
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -29,16 +31,20 @@ function App() {
       setSession(session)
     })
   }, [])
-
-  console.log(session?.user, '123')
+  console.log(path, '111')
   return (
     <div className="app">
       {!session ? <Authentication /> : <div >
-        <Context.Provider value={{ session }} key={session.user.id} session={session} >
+        <Context.Provider value={{ session }}>
           <Navbar />
           <div className="app-container">
-            <ListABC />
-            <CommonBevarages />
+
+            {path === "/account" ? <></> : <div> <ListABC /> <CommonBevarages /></div>}
+
+
+
+
+
             <CocktailContextProvider>
               <Route path='/' />
 

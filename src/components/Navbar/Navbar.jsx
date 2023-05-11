@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../../supabaseClient'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faSignOut } from '@fortawesome/free-solid-svg-icons'
+import { faGear } from '@fortawesome/free-solid-svg-icons'
 import "./Navbar.css"
 import Browser from '../Browser/Browser'
 
@@ -49,13 +51,12 @@ export default function Navbar() {
                 <span className='myAccount' onClick={setToggleMenu}>My Account</span>
                 {toggleMenu &&
                     <div className='dropdownMenu'>
-                        <div>
-                            <Link to='/account'>
-                                <span>Modificar</span>
-                            </Link>
+                        <Link to='/account'>
+                            <span className='accountSettings'> <FontAwesomeIcon icon={faGear} /> Modificar</span>
+                        </Link>
 
-                        </div>
-                        <button type='button' onClick={() => supabase.auth.signOut()}>Log Out </button>
+                        <button className='logOut' type='button' onClick={() => supabase.auth.signOut()}> <FontAwesomeIcon icon={faSignOut} />  Log Out </button>
+
                     </div>}
             </div>
 
