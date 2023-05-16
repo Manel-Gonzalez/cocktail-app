@@ -2,7 +2,7 @@ import { Link } from 'wouter'
 import './listABC.css'
 export default function ListABC() {
     return <>
-        <ul className="alphabet">
+        <div className="alphabet">
             <Link to='/letter/A'>A</Link>
             /
             <Link to='/letter/B'>B</Link>
@@ -50,7 +50,7 @@ export default function ListABC() {
             <Link to='/letter/Y'>Y</Link>
             /
             <Link to='/letter/Z'>Z</Link>
-        </ul>
+        </div>
     </>
 }
 

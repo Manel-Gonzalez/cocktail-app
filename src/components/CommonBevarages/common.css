@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     flex-flow: row wrap;
     gap: 12px;
-    font-size: 28px;
+    font-size: 20px;
+    margin: 1.6em;
 
 }

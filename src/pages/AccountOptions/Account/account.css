@@ -1,0 +1,16 @@
+button {
+    background-color: #cf856e;
+    border-color: tomato;
+}
+
+.form-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+
+.labels {
+    margin-right: 10px;
+}

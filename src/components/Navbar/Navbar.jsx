@@ -52,7 +52,7 @@ export default function Navbar() {
                 {toggleMenu &&
                     <div className='dropdownMenu'>
                         <Link to='/account'>
-                            <span className='accountSettings'> <FontAwesomeIcon icon={faGear} /> Modificar</span>
+                            <span className='accountSettings'> <FontAwesomeIcon icon={faGear} /> Editar Perfil</span>
                         </Link>
 
                         <button className='logOut' type='button' onClick={() => supabase.auth.signOut()}> <FontAwesomeIcon icon={faSignOut} />  Log Out </button>

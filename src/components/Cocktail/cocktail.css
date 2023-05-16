@@ -13,13 +13,6 @@
     border-radius: 0 0 8px 8px;
 }
 
-.CocktailCard:hover {
-    box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.404);
-
-    transform: scale(1.2);
-
-
-}
 
 
 .CocktailCard h4 {
@@ -64,4 +57,11 @@ i {
         height: 3em;
         font-size: 1.8em;
     }
+
+    .CocktailCard:hover {
+        box-shadow: 2px 2px 8px 5px rgba(136, 133, 133, 0.404);
+
+        transform: scale(1.15);
+    }
+
 }

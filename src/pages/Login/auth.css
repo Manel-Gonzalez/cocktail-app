@@ -1,0 +1,16 @@
+.test {
+    padding: 0 1em;
+}
+
+
+@media (min-width:604px) {
+    .test {
+        padding: 0 10em;
+    }
+}
+
+@media (min-width:804px) {
+    .test {
+        padding: 0 15em;
+    }
+}
