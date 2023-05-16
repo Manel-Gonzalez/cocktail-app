@@ -5,12 +5,12 @@
 
 @media (min-width:604px) {
     .test {
-        padding: 0 10em;
+        padding: 0 20vw;
     }
 }
 
 @media (min-width:804px) {
     .test {
-        padding: 0 15em;
+        padding: 0 30vw;
     }
 }
