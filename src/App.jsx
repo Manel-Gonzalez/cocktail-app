@@ -38,7 +38,7 @@ function App() {
           <Navbar />
           <div className="app-container">
 
-            {path === "/account" ? <></> : <div className='searcher-container'> <ListABC /> <CommonBevarages /></div>}
+            {path === "/account" ? <></> : <div className='browser-container'> <ListABC /> <CommonBevarages /></div>}
 
             <CocktailContextProvider>
               <Route path='/' />

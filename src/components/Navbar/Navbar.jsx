@@ -37,7 +37,7 @@ export default function Navbar() {
         <nav className="flex nav">
             <div className='flex left-container' >
                 <Link to='/'>
-                    <h2 className='site-title'>LOS CÓCTELE</h2>
+                    <span className='site-title'>LOS CÓCTELE</span>
                 </Link>
 
                 <div className='flex browser'>

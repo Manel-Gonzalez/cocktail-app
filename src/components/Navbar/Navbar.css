@@ -1,5 +1,5 @@
 .nav {
-    height: 4em;
+    height: 2em;
     justify-content: space-between;
     border-bottom: 2px solid #cf856e;
     background-color: #a7978160;
@@ -27,6 +27,8 @@ ul {
     cursor: pointer;
     width: auto;
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .site-title:hover {
@@ -35,8 +37,10 @@ ul {
 }
 
 .browser {
-    margin-left: 10px;
+    margin-left: 1em;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -100,3 +104,35 @@ ul {
     transform: translateY(-20);
     transition: var(--speed) ease;
 } */
+
+@media (min-width:604px) {
+    .site-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav {
+        height: 3em;
+    }
+
+    .browser {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width:800px) {
+    .site-title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .nav {
+        height: 4em;
+    }
+
+    .browser {
+        display: flex;
+        flex-direction: row;
+    }
+}

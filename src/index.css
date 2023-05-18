@@ -56,7 +56,7 @@ button:focus-visible {
   padding: 10px;
 }
 
-.searcher-container {
+.browser-container {
   display: flex;
   flex-direction: column;
 }
