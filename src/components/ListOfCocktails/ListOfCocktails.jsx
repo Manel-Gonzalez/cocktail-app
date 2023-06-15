@@ -12,8 +12,8 @@ import CommonBevarages from '../CommonBevarages/Common'
 export default function ListOfCocktails({ cocktails, bevarages }) {
    const drinks = cocktails
    const test = bevarages
-   console.log('drinkus', drinks);
-   return <>
+/*    console.log('drinkus', drinks);
+ */   return <>
       <div className='ListOfCocktails'>
          {
             drinks?.map(({ id, name, img, strIngredient1 } = drinks) =>
