@@ -1,4 +1,4 @@
-import { API_URL, API_SEARCH } from "./settings"
+/* import { API_URL, API_SEARCH } from "./settings"
 
 
 
@@ -8,9 +8,10 @@ export default async function getCocktailsByBrowser(keyword = "old") {
   const drinks = await res.json()
 
   return drinks
-
-  //then/catch
-  /*   return fetch(apiURL)
-      .then((res) => res.json())
-      .then(console.log("drinks", drinks)) */
 }
+
+ */
+  //then/catch
+/*   return fetch(apiURL)
+    .then((res) => res.json())
+    .then(console.log("drinks", drinks)) */

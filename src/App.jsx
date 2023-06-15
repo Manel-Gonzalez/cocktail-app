@@ -30,7 +30,6 @@ function App() {
       setSession(session)
     })
   }, [])
-  console.log(path, '111')
   return (
     <div className="app">
       {!session ? <Authentication /> : <div >
