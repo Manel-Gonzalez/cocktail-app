@@ -10,7 +10,7 @@ import { CocktailContextProvider } from './context/CocktailContext'
 import { supabase } from './supabaseClient'
 import Authentication from './pages/Login/auth'
 import Navbar from './components/Navbar/Navbar'
-
+import SearchRandom from './pages/SearchResults/searchRandom'
 function App() {
   const [session, setSession] = useState(null)
   const [path] = useLocation()
@@ -36,7 +36,7 @@ function App() {
             {path === "/account" ? <></> : <div className='browser-container'> </div>}
 
             <CocktailContextProvider>
-              <Route path='/' />
+              <Route path='/' component={SearchRandom} />
 
               <Route path='/account' component={Account} session={session} />
 

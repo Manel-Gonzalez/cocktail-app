@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./cocktail.css"
 import { Link } from 'wouter'
 
-export default function CocktailCard({ strDrink, idDrink, strDrinkThumb, strIngredient1, strIngredient2, strIngredient3, drink }) {
+export default function CocktailCard({ strIngredient1, strIngredient2, strIngredient3, drink }) {
     console.log(drink.id);
     console.log(drink);
     return (
