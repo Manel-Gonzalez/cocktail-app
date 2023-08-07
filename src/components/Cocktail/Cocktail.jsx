@@ -1,18 +1,24 @@
+import { useEffect, useState } from "react";
 import "./cocktail.css"
 import { Link } from 'wouter'
 
-export default function CocktailCard({ strDrink, idDrink, strDrinkThumb, strIngredient1, test }) {
+export default function CocktailCard({ strDrink, idDrink, strDrinkThumb, strIngredient1, strIngredient2, strIngredient3, drink }) {
+    console.log(drink.id);
+    console.log(drink);
     return (
-        <div className='CocktailCard'>
-            <Link to={`/cocktail/${idDrink}`} className='cocktail-link'>
-                <h4>{strDrink}</h4>
-                <img alt={idDrink} src={strDrinkThumb} />
-                <div>{strIngredient1 === undefined ? < div >{test}</div> : <div>{strIngredient1}</div>}</div>
+        <div className='CocktailCard' onClick={(e) => localStorage.setItem('drink', JSON.stringify(drink))} >
+            <Link to={`/cocktail/${drink.id}`} className='cocktail-link' >
+                <h4>{drink.name}</h4>
+                <img alt={drink.id} src={drink.img} />
+                <div><p>{strIngredient1}</p> <p>{strIngredient2}</p> <p>{strIngredient3}</p></div>
             </Link >
-
         </div >
     )
 }
+/* 
+onClick={localStorage.setItem('test', JSON.stringify(data))}
+*/
+
 
 /*             <ul>
                 <li>{ing1} </li>
@@ -25,3 +31,14 @@ export default function CocktailCard({ strDrink, idDrink, strDrinkThumb, strIngr
             
             
             */
+
+
+/*
+ 
+onClick={() => {
+if (drink.id === idDrink) {
+   localStorage.setItem('test', JSON.stringify(drink))
+
+}
+console.log('asdfasdfasdf', drink)
+}}*/

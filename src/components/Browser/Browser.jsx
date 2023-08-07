@@ -12,11 +12,16 @@ export default function Browser() {
 
     const handleSubmit = evt => {
         evt.preventDefault()
-        pushLocation(`/search/${keyword}`)
+        const palabra = evt.target.palabra.value
+        console.log('Test =>>>>', palabra)
+        pushLocation(`/search/${palabra}`)
     }
 
     const handleChange = evt => {
+        evt.preventDefault()
         setKeyword(evt.target.value)
+
+        console.log('setKeyword enter', keyword)
     }
 
 
@@ -25,7 +30,7 @@ export default function Browser() {
     return <>
         <span>
             <form onSubmit={handleSubmit}>
-                <input placeholder="Busca tus cóctele" type="text" onChange={handleChange} value={keyword} />
+                <input placeholder="Busca tus cóctele" type="text" name="palabra" />
             </form>
         </span>
 

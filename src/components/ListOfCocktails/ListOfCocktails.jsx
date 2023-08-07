@@ -2,41 +2,40 @@ import { useEffect, useState } from 'react'
 import Cocktail from "../Cocktail/Cocktail"
 import SingleCocktail from '../SingleCocktail/SingleCocktail'
 /* import getCocktails from '../../services/getByBrowser'
- */import ListABC from '../ListABC/ListABC'
+/* 
+ /*import ListABC from '../ListABC/ListABC'*/
 import Browser from '../Browser/Browser'
 import "./ListOfCocktails.css"
-import CommonBevarages from '../CommonBevarages/Common'
+import Spinner from '../Spinner/loadingSpinner'
 
 
 
-export default function ListOfCocktails({ cocktails, bevarages }) {
-   const drinks = cocktails
-   const test = bevarages
-/*    console.log('drinkus', drinks);
- */   return <>
+export default function ListOfCocktails({ cocktails }) {
+   return <>
       <div className='ListOfCocktails'>
          {
-            drinks?.map(({ id, name, img, strIngredient1 } = drinks) =>
+            (cocktails.length > 0 ? cocktails?.map((drink) =>
                <Cocktail
-                  key={id}
-                  strDrink={name}
-                  idDrink={id}
-                  strDrinkThumb={img}
-                  strIngredient1={strIngredient1}
-                  test={test}
+                  key={drink.id}
+                  strDrink={drink.name}
+                  idDrink={drink.id}
+                  strDrinkThumb={drink.img}
+                  drink={drink}
+                  strIngredient1={drink.ingredients[0]?.name}
+                  strIngredient2={drink.ingredients[1]?.name}
+                  strIngredient3={drink.ingredients[2]?.name}
+               />
+
+
+            )
+               : <Spinner
+                  style={{ heigth: 100 }}
                />
             )
+
+
          }
       </div>
    </>
 
 }
-
-/* 
-                  ing1={strIngredient1}
-                  ing2={strIngredient2}
-                  ing3={strIngredient3}
-                  ing4={strIngredient4}
-                  ing5={strIngredient5}
-
-*/

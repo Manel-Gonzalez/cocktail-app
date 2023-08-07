@@ -6,18 +6,18 @@ import CocktailDetail from "../pages/Detail/cocktailDetail";
 
 
 export default function useCocktails(id, setData) {
-
-    useEffect(function () {
-
-        async function coso() {
-            const apiURL = `${API_URL}/${API_ID}${id}`
-            const res = await fetch(apiURL)
-            await res.json().then(setData)
-            console.log("1");
-        }
-        coso()
-    }, [id, setData])
-
+    /* 
+        useEffect(function () {
+    
+            async function coso() {
+                const apiURL = `${API_URL}/${API_ID}${id}`
+                const res = await fetch(apiURL)
+                await res.json().then(setData)
+                console.log("1");
+            }
+            coso()
+        }, [id, setData])
+     */
 }
 
 

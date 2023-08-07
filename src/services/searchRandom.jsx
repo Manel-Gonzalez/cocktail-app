@@ -1,4 +1,4 @@
-import { API_URL, API_RANDOM } from "./settings";
+/* import { API_URL, API_RANDOM } from "./settings";
 
 const fromApiResponseToCocktails = apiResponse => {
     const { drinks = [] } = apiResponse
@@ -18,4 +18,4 @@ export default function searchRandom() {
     return fetch(apiURL)
         .then((res) => res.json())
         .then(fromApiResponseToCocktails)
-}
+} */

@@ -1,4 +1,3 @@
-import useCocktails from "../../hooks/useCocktailById"
 
 
 export default function SingleCocktail(idDrink) {
